@@ -1,0 +1,11 @@
+def temparature_temp(temp):
+    if temp<18:
+        return 'cold'
+    elif temp>=18 and temp<=28:
+        return'warm'
+    else:
+        return 'hot'
+temp = int(input("enter temp: "))
+print(temparature_temp(temp))
+
+
