@@ -1,0 +1,24 @@
+
+def compute_pay(p_hour,p_rate):
+    if p_hour < 40:
+        pay = round(p_hour*p_rate ,2)
+    else:
+        overtime =(p_hour-40)
+        pay =(p_rate*40)+(1.5*p_rate*overtime)
+        return pay
+def check_for_float(hour):
+    try:
+        val = float(p_input)
+
+    except ValueError:
+        print('error,please enter a numeric number')
+    quit()
+    return val
+hour = input("enter hours: ")
+hour = check_for_float(hour)
+
+rate = input("enter rate: ")
+rate = float(rate)
+output = compute_pay(hour,rate)
+
+print(f"pay:{output}")
