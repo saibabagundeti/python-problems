@@ -1,0 +1,18 @@
+burger_type =input("what type of burger do you want? M,N,or L ")
+mushroom = input('Do you want add mushroom? Y or N')
+extra_cheese =input('do you want extra cheese? Y or N')
+bill = 0
+if burger_type == "m":
+    bill += 5
+elif burger_type == "N":
+    bill += 8
+elif burger_type == "L":
+    bill += 10
+if mushroom == "Y":
+    if burger_type == "L":
+        bill += 2
+    else:
+        bill +=1
+if extra_cheese == "Y":
+    bill += 1
+print(f"Your final bill is:${bill}")
