@@ -1,0 +1,19 @@
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+def binaryGap(num):
+    s=''
+    while(num):
+        s+=str(num%2)   
+        num//=2
+    s=s[::-1]
+    count=-1
+    last_bit=-1
+    for c in range(len(s)):
+        if (s[c]=='1'):
+            if (last_bit !=-1 and count<c-last_bit):
+                count=c-last_bit
+            last_bit=c
+    return count
