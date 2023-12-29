@@ -1,0 +1,25 @@
+def convert_grade(student_scores):
+    for key in student_scores:
+
+        if student_scores[key] > 85:
+            student_scores[key] = "Outstanding"
+        elif student_scores[key] > 65 :
+
+            student_scores[key] = "Good"
+        elif student_scores[key] > 50 :
+            student_scores[key] = "Acceptable"
+        else:
+            student_scores[key] = "Fail"
+    return student_scores
+
+
+student_scores = {
+    "John": 90,
+    "Edy": 68,
+    "Marry": 88,
+    "Ewan": 79,
+    "Park": 62,
+    }
+print(convert_grade(student_scores))
+
+
