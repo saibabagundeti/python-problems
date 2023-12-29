@@ -1,0 +1,12 @@
+print('Welcome to the mortgage calculator')
+salary = input('what is your salary? ')
+salary = int(salary)
+if salary >= 2000:
+    print('you are eligible for mortage')
+    credit_score = int(input('what is your credit score'))
+    if credit_score > 800:
+        print('your interest rate is 4%')
+    else:
+        print('your interest rate is 6%')
+else:
+    print('you are not eligible for mortgsge')
